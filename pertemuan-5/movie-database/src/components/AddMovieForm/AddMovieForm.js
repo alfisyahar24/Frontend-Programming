@@ -35,7 +35,7 @@ function AddMovieForm() {
         <div className="AddMovieForm__left">
           <img
             className={styles.AddMovieForm__image}
-            src="https://cdn.iconscout.com/icon/free/png-256/plus-square-1957308-1651002.png"
+            src="https://media.istockphoto.com/vectors/flat-square-plus-sign-green-icon-button-positive-symbol-vector-id692769254?k=20&m=692769254&s=170667a&w=0&h=dmgx4rfzdxuUIbhKxvvuyPZU1t46_BQGcIFmM0z6jK4="
             alt="placeholder"
           />
         </div>
