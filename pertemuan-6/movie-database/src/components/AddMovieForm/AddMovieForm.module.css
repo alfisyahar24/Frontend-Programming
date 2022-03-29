@@ -1,0 +1,90 @@
+/* Small Screen */
+.container {
+  margin: 1rem;
+}
+
+.AddMovieForm {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.AddMovieForm__left {
+  margin-bottom: 1rem;
+}
+
+.AddMovieForm__title {
+  /* width: 100%; */
+  color: #4361ee;
+  margin-bottom: 2rem;
+  font-size: 2.44rem;
+  /* margin-right: 12rem; */
+  text-align: center;
+}
+
+.AddMovieForm__input {
+  width: 100%;
+  padding: 12px 3px;
+  margin-bottom: 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.AddMovieForm__label {
+  color: #64748b;
+}
+
+.AddMovieForm__button {
+  width: 100%;
+  padding: 12px 3px;
+  border: none;
+  border-radius: 10px;
+  background-color: #4361ee;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+.AddMovieForm__image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 25px;
+  /* margin-left: 12rem; */
+}
+
+/* Medium Screen */
+@media (min-width: 768px) {
+  /*
+     * Nothing TODO Here.
+     * We dont change style AddMovieForm. 
+     */
+}
+
+/* Large Screen */
+@media (min-width: 992px) {
+  .container {
+    max-width: 1200px;
+    margin: 3rem auto;
+  }
+
+  .AddMovieForm {
+    margin: 0 1rem;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: left;
+  }
+
+  .AddMovieForm__left {
+    flex-basis: 60%;
+  }
+
+  .AddMovieForm__right {
+    flex-basis: 40%;
+  }
+}
