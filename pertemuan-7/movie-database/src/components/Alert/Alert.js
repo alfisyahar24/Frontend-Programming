@@ -9,7 +9,7 @@ function Alert(props) {
 
   return (
     <div>
-      <span>{children}</span>
+      <p className={styles.alert}>{children}</p>
     </div>
   );
 }

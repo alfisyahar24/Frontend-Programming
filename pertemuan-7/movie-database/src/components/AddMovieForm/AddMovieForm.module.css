@@ -1,22 +1,24 @@
 /* Small Screen */
 .container {
   margin: 1rem;
+  padding: 1rem;
 }
 
 .AddMovieForm {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .AddMovieForm__left {
-  margin-bottom: 1rem;
+  display: none;
+  /* margin-bottom: 1rem; */
 }
 
 .AddMovieForm__title {
   /* width: 100%; */
   color: #4361ee;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-size: 2.44rem;
   /* margin-right: 12rem; */
   text-align: center;
@@ -27,10 +29,8 @@
   padding: 12px 3px;
   margin-bottom: 15px;
   margin: 8px 0;
-  display: inline-block;
   border: 1px solid #ccc;
   border-radius: 7px;
-  box-sizing: border-box;
   flex-direction: column;
 }
 
@@ -48,10 +48,11 @@
 
 .AddMovieForm__label {
   color: #64748b;
+  margin-bottom: 1rem;
 }
 
 .AddMovieForm__button {
-  width: 100%;
+  /* width: 100%;
   padding: 12px 3px;
   border: none;
   border-radius: 10px;
@@ -59,7 +60,26 @@
   color: #fff;
   font-size: 1.5rem;
   font-weight: bold;
-  margin-top: 1.5rem;
+  margin-top: 1.5rem; */
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #4361ee;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  transition-duration: 0.4s;
+}
+
+.AddMovieForm__button:hover {
+  background-color: blue;
+  color: white;
+}
+
+.AddMovieForm__option {
+  color: grey;
+  text-align: center;
 }
 
 .AddMovieForm__image {
