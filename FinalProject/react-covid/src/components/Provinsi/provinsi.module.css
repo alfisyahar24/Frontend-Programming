@@ -1,0 +1,81 @@
+/* Small Screen */
+.container {
+  margin: 1rem 0;
+  /* background-color: #f8f9fa; */
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.provinsi {
+  margin: 5rem 0;
+  text-align: center;
+}
+
+.provinsi__title {
+  margin-bottom: 0.5rem;
+  font-size: 2.44rem;
+  color: #06d6a0;
+}
+
+.provinsi__subtitle {
+  color: #2f99bc;
+  margin-bottom: 2rem;
+  font-size: 1.563rem;
+}
+
+.provinsi__table {
+  width: 50%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.provinsi__table,
+th {
+  border: 1px solid;
+  border-color: #a4adb8;
+  color: #06d6a0;
+  height: 3rem;
+  width: 3rem;
+}
+
+.provinsi__table,
+td {
+  border: 1px solid;
+  border-color: #a4adb8;
+  color: black;
+  height: 3rem;
+  width: 3rem;
+}
+
+.provinsi__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Medium Screen */
+@media (min-width: 768px) {
+  .provinsi__table {
+    width: 80%;
+  }
+
+  .provinsi__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Large Screen */
+@media (min-width: 992px) {
+  .container {
+    max-width: 1200px;
+    margin: 3rem auto;
+  }
+
+  .provinsi__table {
+    width: 85%;
+  }
+}

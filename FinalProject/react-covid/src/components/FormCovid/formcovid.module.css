@@ -1,0 +1,130 @@
+/* Small Screen */
+.container {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+
+.formcovid {
+  display: flex;
+  flex-direction: column;
+}
+
+.formcovid__left {
+  margin-bottom: 1rem;
+}
+
+.formcovid__title {
+  /* width: 100%; */
+  color: #06d6a0;
+  margin-bottom: 0.5rem;
+  font-size: 2.44rem;
+  /* margin-right: 12rem; */
+  text-align: center;
+}
+
+.formcovid__input {
+  width: 100%;
+  padding: 12px 3px;
+  margin-bottom: 15px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  flex-direction: column;
+  /* outline: none;
+  padding: 1rem 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #64748b; */
+}
+
+.formcovid__input:focus {
+  border: 1px solid #4361ee;
+}
+
+.formcovid__select {
+  width: 100%;
+  padding: 12px 3px;
+  margin-bottom: 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.formcovid__label {
+  color: #64748b;
+  margin-bottom: 1rem;
+}
+
+.formcovid__button {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #06d6a0;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  transition-duration: 0.4s;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.formcovid__button:hover {
+  background-color: #009f75;
+  color: white;
+}
+
+.formcovid__option {
+  color: grey;
+  /* text-align: center; */
+}
+
+.formcovid__image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
+}
+
+/* Medium Screen */
+@media (min-width: 768px) {
+  /*
+     * Nothing TODO Here.
+     * We dont change style formcovid. 
+     */
+}
+
+/* Large Screen */
+@media (min-width: 992px) {
+  .container {
+    max-width: 1200px;
+    margin: 3rem auto;
+  }
+
+  .formcovid {
+    /* margin: 0 1rem; */
+    /* display: flex; */
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+  }
+
+  .formcovid__left {
+    display: block;
+    flex-basis: 50%;
+  }
+
+  .formcovid__right {
+    flex-basis: 50%;
+  }
+
+  .formcovid__image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+}
