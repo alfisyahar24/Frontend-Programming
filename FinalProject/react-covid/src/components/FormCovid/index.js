@@ -4,10 +4,12 @@ import image from "./undraw_conceptual_idea_xw7k.png";
 import data from "../../utils/constants/provinces";
 import Alert from "../Alert";
 
-function FormCovid() {
+function FormCovid(props) {
   const provinces = data.provinces;
 
   const listStatus = ["Positif", "Sembuh", "Dirawat", "Meninggal"];
+
+  const { setProvinsi } = props;
 
   const [kota, setKota] = useState("");
   const [status, setStatus] = useState("");
@@ -30,27 +32,46 @@ function FormCovid() {
   function handleSubmit(e) {
     e.preventDefault(); // Mencegah perilaku default: refresh
 
-    // Jika title kosong, maka set error title true
     if (jumlah === "") {
       setIsJumlahError(true);
-    }
-    // Jika tidak kosong, tambah data
-    else {
-      // Siapkan movie yang ingin diinput
-      // const movie = {
-      //   id: nanoid(),
-      //   title: title,
-      //   year: date,
-      //   type: genre,
-      //   poster: gambar,
-      // };
+    } else {
+      const index = provinces.findIndex((item) => item.kota === kota);
+      const foundKota = provinces.find((item) => item.kota === kota);
 
-      // setMovies([...movies, movie]);
+      let currentValueKasus = parseInt(foundKota.kasus);
+      let currentValueSembuh = parseInt(foundKota.sembuh);
+      let currentValueDirawat = parseInt(foundKota.dirawat);
+      let currentValueMeninggal = parseInt(foundKota.meninggal);
+
+      let valueNowKasus = status === "Positif" ? parseInt(jumlah) : parseInt(0);
+
+      let valueNowSembuh = status === "Sembuh" ? parseInt(jumlah) : parseInt(0);
+
+      let valueNowDirawat =
+        status === "Dirawat" ? parseInt(jumlah) : parseInt(0);
+
+      let valueNowMeninggal =
+        status === "Meninggal" ? parseInt(jumlah) : parseInt(0);
+
+      const propinsi = {
+        kota: kota,
+        kasus: currentValueKasus + valueNowKasus,
+        sembuh: currentValueSembuh + valueNowSembuh,
+        dirawat: currentValueDirawat + valueNowDirawat,
+        meninggal: currentValueMeninggal + valueNowMeninggal,
+      };
+      // console.log(propinsi);
+
+      provinces[index] = propinsi;
+      // console.log(provinces);
+
+      setProvinsi([...provinces]);
+
       setIsJumlahError(false);
     }
-    console.log(kota);
-    console.log(status);
-    console.log(jumlah);
+    // console.log(kota);
+    // console.log(status);
+    // console.log(jumlah);
   }
 
   return (

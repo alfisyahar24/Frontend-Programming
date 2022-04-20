@@ -6,11 +6,11 @@ import FormCovid from "../components/FormCovid";
 import Footer from "../components/Footer";
 import { useState } from "react";
 import data from "../utils/constants/indonesia";
-// import data from "../utils/data";
-// import Provinces from "../utils/constants/provinces";
+import Provinces from "../utils/constants/provinces";
 
 function Main() {
   const [globalsection, setGlobalSection] = useState(data);
+  const [provinsi, setProvinsi] = useState(Provinces.provinces);
 
   return (
     <main>
@@ -20,10 +20,7 @@ function Main() {
         setGlobalSection={setGlobalSection}
       />
       <Provinsi />
-      <FormCovid
-        globalsection={globalsection}
-        setGlobalSection={setGlobalSection}
-      />
+      <FormCovid provinsi={provinsi} setProvinsi={setProvinsi} />
     </main>
   );
 }
