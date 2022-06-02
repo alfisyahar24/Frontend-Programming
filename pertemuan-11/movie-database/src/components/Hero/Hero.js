@@ -9,7 +9,7 @@ function Hero() {
   const [movie, setMovie] = useState("");
   const API_KEY = process.env.REACT_APP_API_KEY;
   const genres = movie && movie.genres.map((genre) => genre.name).join(", ");
-  const idTrailer = movie && movie.videos.results[0].key;
+  const trailer = movie && movie.videos.results[0].key;
 
   /**
    * Mengambil 1 data dari trending movie.
@@ -19,7 +19,7 @@ function Hero() {
   async function getTrendingMovie() {
     const URL = `https://api.themoviedb.org/3/trending/movie/day?api_key=${API_KEY}`;
     const response = await axios(URL);
-    return response.data.results[0];
+    return response.data.results[3];
   }
 
   /**
@@ -51,7 +51,7 @@ function Hero() {
           <p>{movie.overview}</p>
           <Button
             as="a"
-            href={`https://www.youtube.com/watch?v=${idTrailer}`}
+            href={`https://www.youtube.com/watch?v=${trailer}`}
             target="_blank"
           >
             Watch Movie

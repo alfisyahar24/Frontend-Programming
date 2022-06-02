@@ -15,7 +15,7 @@ function PopularMovie() {
    * Melakukan useEffect.
    * useEffect to perform other jobs: fetch data
    */
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+
   useEffect(() => {
     getPopularMovies();
   }, []);
