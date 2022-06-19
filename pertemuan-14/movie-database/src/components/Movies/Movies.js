@@ -2,10 +2,7 @@ import { useSelector } from "react-redux";
 import Movie from "../Movie/Movie";
 import styles from "./Movies.module.css";
 
-function Movies(props) {
-  // Destructing props: state movies
-  const { title } = props;
-
+function Movies({ title }) {
   const movies = useSelector((store) => store.movies.movies);
 
   return (
