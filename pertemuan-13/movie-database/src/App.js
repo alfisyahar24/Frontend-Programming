@@ -11,11 +11,8 @@ import { ThemeProvider } from "styled-components";
 import theme from "./utils/constants/theme";
 import GlobalStyle from "./components/GlobalStyle";
 import Detail from "./pages/movie/Detail";
-import { useState } from "react";
-import data from "./utils/constants/data";
 
 function App() {
-  const [movies, setMovies] = useState(data);
   /**
    * Tag div bisa diganti dengan tag <>.
    * Tag <> adalah React fragment
@@ -38,11 +35,8 @@ function App() {
            * Buat Routing menggunakan Route.
            */}
           <Routes>
-            <Route path="/" element={<Home movies={movies} />}></Route>
-            <Route
-              path="/movie/create"
-              element={<CreateMovie movies={movies} setMovies={setMovies} />}
-            />
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/movie/create" element={<CreateMovie />} />
             <Route path="/movie/popular" element={<PopularMovie />} />
             <Route path="/movie/now_playing" element={<NowPlayingMovie />} />
             <Route path="/movie/top_rated" element={<TopRatedMovie />} />

@@ -4,6 +4,8 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 // Import Browser Router dari React Router
 import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./store";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,9 +13,11 @@ ReactDOM.render(
      * Bungkus/Hubungkan Aplikasi dengan Browser Router.
      * Agar URL browser dapat dimanipulasi oleh React Router
      */}
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
