@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/frontend-programming/static/css/main.04f786d3.css",
-    "main.js": "/frontend-programming/static/js/main.547c1f0b.js",
-    "static/js/787.d02d9e27.chunk.js": "/frontend-programming/static/js/787.d02d9e27.chunk.js",
-    "index.html": "/frontend-programming/index.html",
-    "main.04f786d3.css.map": "/frontend-programming/static/css/main.04f786d3.css.map",
-    "main.547c1f0b.js.map": "/frontend-programming/static/js/main.547c1f0b.js.map",
-    "787.d02d9e27.chunk.js.map": "/frontend-programming/static/js/787.d02d9e27.chunk.js.map"
+    "main.css": "/Frontend-Programming/static/css/main.04f786d3.css",
+    "main.js": "/Frontend-Programming/static/js/main.6ff69b1f.js",
+    "static/js/787.d02d9e27.chunk.js": "/Frontend-Programming/static/js/787.d02d9e27.chunk.js",
+    "index.html": "/Frontend-Programming/index.html",
+    "main.04f786d3.css.map": "/Frontend-Programming/static/css/main.04f786d3.css.map",
+    "main.6ff69b1f.js.map": "/Frontend-Programming/static/js/main.6ff69b1f.js.map",
+    "787.d02d9e27.chunk.js.map": "/Frontend-Programming/static/js/787.d02d9e27.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.04f786d3.css",
-    "static/js/main.547c1f0b.js"
+    "static/js/main.6ff69b1f.js"
   ]
 }
