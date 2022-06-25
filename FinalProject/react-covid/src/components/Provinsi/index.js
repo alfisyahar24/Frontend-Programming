@@ -1,18 +1,16 @@
-import styles from "./provinsi.module.css";
 import data from "../../utils/constants/provinces";
+import StyledProvinsi from "./provinsi.styled";
 
 function Provinsi() {
   const provinsi = data.provinces;
   let nomor = 0;
   return (
-    <div className={styles.container}>
-      <section className={styles.provinsi}>
-        <h2 className={styles.provinsi__title}>Provinsi</h2>
-        <h4 className={styles.provinsi__subtitle}>
-          Data Covid Berdasarkan Provinsi
-        </h4>
-        <div className={styles.provinsi__container}>
-          <table className={styles.provinsi__table}>
+    <StyledProvinsi>
+      <section>
+        <h2>Provinsi</h2>
+        <h4>Data Covid Provinsi</h4>
+        <div className="provinsi__container">
+          <table>
             <thead>
               <tr>
                 <th>No</th>
@@ -39,7 +37,7 @@ function Provinsi() {
           </table>
         </div>
       </section>
-    </div>
+    </StyledProvinsi>
   );
 }
 

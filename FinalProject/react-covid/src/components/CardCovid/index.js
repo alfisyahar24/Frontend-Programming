@@ -1,17 +1,17 @@
-import styles from "./cardcovid.module.css";
+import StyledCard from "./cardcovid.styled";
 
 function CardCovid(props) {
   const { cardcovid } = props;
 
   return (
-    <div className={styles.cardcovid}>
-      <div className={styles.cardcovid__column}>
-        <div className={styles.cardcovid__card}>
-          <h3 className={styles.cardcovid__status}>{cardcovid.status}</h3>
-          <h2 className={styles.cardcovid__total}>{cardcovid.total}</h2>
+    <StyledCard>
+      <div className="cardcovid__column">
+        <div className="cardcovid__card">
+          <h3>{cardcovid.status}</h3>
+          <h2>{cardcovid.total}</h2>
         </div>
       </div>
-    </div>
+    </StyledCard>
   );
 }
 

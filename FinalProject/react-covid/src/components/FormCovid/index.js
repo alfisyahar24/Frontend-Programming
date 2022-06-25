@@ -1,8 +1,9 @@
-import styles from "./formcovid.module.css";
 import { useState } from "react";
 import image from "./undraw_conceptual_idea_xw7k.png";
 import data from "../../utils/constants/provinces";
 import Alert from "../Alert";
+import Button from "../Ui/Button";
+import StyledForm from "./formcovid.styled";
 
 function FormCovid(props) {
   const provinces = data.provinces;
@@ -60,52 +61,32 @@ function FormCovid(props) {
         dirawat: currentValueDirawat + valueNowDirawat,
         meninggal: currentValueMeninggal + valueNowMeninggal,
       };
-      // console.log(propinsi);
 
       provinces[index] = propinsi;
-      // console.log(provinces);
 
       setProvinsi([...provinces]);
 
       setIsJumlahError(false);
     }
-    // console.log(kota);
-    // console.log(status);
-    // console.log(jumlah);
   }
 
   return (
-    <div className={styles.container}>
-      <section className={styles.formcovid}>
-        <div className={styles.formcovid}>
-          <img className={styles.formcovid__image} src={image} alt="" />
-        </div>
-        <div className={styles.formcovid__right}>
-          <h2 className={styles.formcovid__title}>Form Covid</h2>
+    <StyledForm>
+      <section>
+        <StyledForm>
+          <img src={image} alt="" />
+        </StyledForm>
+        <div className="formcovid__right">
+          <h2>Form Covid</h2>
           <form onSubmit={handleSubmit}>
             {/* ----- Provinsi -----*/}
             <div>
-              <label className={styles.formcovid__label}>Provinsi</label>
-              <select
-                value={kota}
-                onChange={handleKota}
-                name="kota"
-                id="kota"
-                className={styles.formcovid__select}
-              >
-                <option
-                  className={styles.formcovid__option}
-                  value="Select Provinsi"
-                >
-                  Select Provinsi
-                </option>
+              <label>Provinsi</label>
+              <select value={kota} onChange={handleKota} name="kota" id="kota">
+                <option value="Select Provinsi">Select Provinsi</option>
                 {provinces.map((province, key) => {
                   return (
-                    <option
-                      className={styles.formcovid__option}
-                      value={province.kota}
-                      key={key}
-                    >
+                    <option value={province.kota} key={key}>
                       {province.kota}
                     </option>
                   );
@@ -116,27 +97,17 @@ function FormCovid(props) {
 
             {/* ----- Status -----*/}
             <div>
-              <label className={styles.formcovid__label}>Status</label>
+              <label>Status</label>
               <select
                 value={status}
                 onChange={handleStatus}
                 name="status"
                 id="status"
-                className={styles.formcovid__select}
               >
-                <option
-                  className={styles.formcovid__option}
-                  value="Select Status"
-                >
-                  Select Status
-                </option>
+                <option value="Select Status">Select Status</option>
                 {listStatus.map((statusCovid, key) => {
                   return (
-                    <option
-                      className={styles.formcovid__option}
-                      value={statusCovid}
-                      key={key}
-                    >
+                    <option value={statusCovid} key={key}>
                       {statusCovid}
                     </option>
                   );
@@ -147,14 +118,13 @@ function FormCovid(props) {
 
             {/* ----- Jumlah -----*/}
             <div>
-              <label className={styles.formcovid__label}>Jumlah</label>
+              <label>Jumlah</label>
               <input
                 value={jumlah}
                 onChange={handleJumlah}
                 id="jumlah"
                 name="jumlah"
                 type="number"
-                className={styles.formcovid__input}
               ></input>
               {isJumlahError && <Alert>Jumlah Wajib Diisi</Alert>}
             </div>
@@ -162,13 +132,13 @@ function FormCovid(props) {
 
             {/* ----- Button -----*/}
             <div>
-              <button className={styles.formcovid__button}>Submit</button>
+              <Button full>Submit</Button>
             </div>
             {/* ----- End Button -----*/}
           </form>
         </div>
       </section>
-    </div>
+    </StyledForm>
   );
 }
 
